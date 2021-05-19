@@ -29,7 +29,6 @@
 }
 body{
     background: var(--relleno_body);
-    border: var(--borde_caja_hija);
     overflow-x: hidden;
 }
 header{
@@ -142,8 +141,6 @@ section{
     margin-right: .5%;
     border: var(--borde_caja_padre);
 }
-
-
 .Caja{
     position: absolute;
     padding-bottom: 7em;

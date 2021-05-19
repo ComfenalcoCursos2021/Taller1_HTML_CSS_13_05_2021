@@ -9,35 +9,30 @@ html(lang="sp")
         link(rel="preconnect" href="https://fonts.gstatic.com")
         link(href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap" rel="stylesheet")
         title Taller 1 Maquetacion Web PUG
-    body 
+    body
+        -let data =[{article: {titulo: "Lo mas reciente",header: "1",div: "2",aside: "3",p: "4" },article2: {titulo: "Novedades",header: "awd",div: "4",p: "6",footer: "7" },titulo: "Ultimas noticias"},{article: {titulo: "Lo mas reciente",header: "1",div: "2",aside: "3",p: "4" },article2: {titulo: "Novedades",header: "awd",div: "4",p: "6",footer: "7" },titulo: "Ultimas noticias"}];
+        script.
+            console.log(!{JSON.stringify(data)});
+        
         header Header
             nav Nav
         section Section
             nav Nav
             aside Aside
         div(class="Caja")
-            section(class="noticias") Section
-                header Header
-                article Article
-                    header Header
-                    div Div 
-                    aside Aside
-                    p P
-                article Article
-                    header Header
-                    div Div 
-                    p P
-                    footer footer
-            section(class="noticias") Section
-                header Header
-                article Article
-                    header Header
-                    div Div 
-                    aside Aside
-                    p P
-                article Article
-                    header Header
-                    div Div 
-                    p P
-                    footer footer
+            mixin sesiones({...arg})
+                each valor, i in arg
+                    section(class="noticias")
+                        header= valor.titulo
+                        article= valor.article.titulo
+                            header= valor.article.header
+                            div= valor.article.div
+                            aside= valor.article.aside
+                            p= valor.article.p
+                        article= valor.article2.titulo
+                            header= valor.article2.header
+                            div= valor.article2.div
+                            p= valor.article2.p
+                            footer= valor.article2.footer
+            +sesiones(data)
         footer footer
