@@ -1,187 +1,217 @@
-/* font-family: 'Play', sans-serif; */
-/* 700 */
-/* 400 */
-*{
-    margin: 0;
-    padding: 0;
-    
+* {
+  margin: 0;
+  padding: 0;
 }
-/*.4em 5px*/
-/*.7em 10px*/
-/*1.2em 20px*/
-/*.9em 15px*/
-:root{
-    --fuente: 'Play', sans-serif;
-    --fuente_normal: 400;
-    --fuente_negrita: 700;
-    /* --relleno_header: red;
-    --relleno_nav:blue;
-    --relleno_section:orange;
-    --relleno_aside:violet;
-    --relleno_article:Brown;
-    --relleno_div:tan;
-    --relleno_p:teal;
-    --relleno_footer:lavender; */
-    --borde_caja_padre: .1em double rgb(5, 255, 88);
-    --borde_caja_hija: .1em solid rgb(255, 238, 0);
-    --relleno_body: rgb(253, 253, 253);
-    
+
+body {
+  background: #fdfdfd;
+  overflow-x: hidden;
 }
-body{
-    background: var(--relleno_body);
-    overflow-x: hidden;
+
+header {
+  font-family: "Play", sans-serif;
+  font-weight: 700;
+  border: 0.1em double #05ff58;
+  position: fixed;
+  top: 0;
+  width: 97.7%;
+  text-align: center;
+  padding: 0.7em 0.9em;
+  /* background: red; */
+  background: transparent;
 }
-header{
-    position: fixed;
-    top: 0;
-    width: 97.7%;
-    font-family: var(--fuente);
-    font-weight: var(--fuente_negrita);
-    border: var(--borde_caja_padre);
-    text-align: center;
-    padding: .7em .9em;
-    /* background: red; */
-    background: var(--relleno_header);
+@media only screen and (max-width: 500px) {
+  header {
+    position: relative !important;
+    top: 0 !important;
+    width: 100% !important;
+  }
 }
-nav{
-    font-family: var(--fuente);
-    font-weight: var(--fuente_normal);
-    border: var(--borde_caja_hija);
-    text-align: center;
-    /* background: red; */
-    background: var(--relleno_nav);
+
+nav {
+  font-family: "Play", sans-serif;
+  font-weight: 400;
+  border: 0.1em solid #ffee00;
+  text-align: center;
+  /* background: red; */
+  background: transparent;
 }
-aside{
-    font-family: var(--fuente);
-    font-weight: var(--fuente_normal);
-    border: var(--borde_caja_hija);
-    /* background: red; */
-    background: var(--relleno_aside);
+
+aside {
+  font-family: "Play", sans-serif;
+  font-weight: 400;
+  border: 0.1em solid #ffee00;
+  /* background: red; */
+  background: transparent;
 }
-section{
-    text-align: center;
-    font-family: var(--fuente);
-    font-weight: var(--fuente_negrita);
-    display: inline-block;
-    vertical-align: middle;
-    margin: .4em 0;
-    padding: .7em .9em;
-    /* background: red; */
-    background: var(--relleno_section);
+
+section {
+  font-family: "Play", sans-serif;
+  font-weight: 700;
+  text-align: center;
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0.4em 0;
+  padding: 0.7em 0.9em;
+  /* background: red; */
+  background: transparent;
 }
-section nav{
-    /*Adaptar nuesto contemido*/
-    padding: 120px 0;
-    /* background: red; */
+@media only screen and (max-width: 500px) {
+  section {
+    display: none !important;
+  }
 }
-section aside{
-    /*Adaptar nuesto contemido*/
-    padding: 50px 0;
-    /* background: red; */
+
+section nav {
+  /*Adaptar nuesto contemido*/
+  padding: 120px 0;
+  /* background: red; */
 }
-section header{
-    position: static;
-    font-family: var(--fuente);
-    font-weight: var(--fuente_normal);
-    border: var(--borde_caja_hija);
-    /* background: red; */
+
+section aside {
+  /*Adaptar nuesto contemido*/
+  padding: 50px 0;
+  /* background: red; */
 }
-article header, 
-article div, 
+
+section header {
+  font-family: "Play", sans-serif;
+  font-weight: 400;
+  border: 0.1em solid #ffee00;
+  position: static;
+  /* background: red; */
+}
+
+article header,
+article div,
 article aside,
 article p,
-article footer
-{
-    margin: 0;
-    padding: .7em 0;
-    display: inline-block;
-    vertical-align: top;
-    width: 95.8%;
-}
-section article{
-    margin: .7em .0;
-    padding: .7em .0;
-    border: var(--borde_caja_padre);
-    background: var(--relleno_article);
-    font-family: var(--fuente);
-    font-weight: var(--fuente_negrita);
-}
-section div{
-    font-family: var(--fuente);
-    font-weight: var(--fuente_normal);
-    border: var(--borde_caja_padre);
-    background: var(--relleno_div);
-    border: var(--borde_caja_hija);
-
-}
-section p{
-    width: 95.8%;
-    background: var(--relleno_p);
-    border: var(--borde_caja_hija);
-    font-family: var(--fuente);
-    font-weight: var(--fuente_normal);
-}
-footer{
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    font-family: var(--fuente);
-    font-weight: var(--fuente_negrita);
-    text-align: center;
-    border: var(--borde_caja_padre);
-    background: var(--relleno_footer);
-    padding: .7em 0;
-}
-section{
-    position: fixed;
-    top: 22%;
-    left: 0;
-    width: 30%;
-    margin-right: .5%;
-    border: var(--borde_caja_padre);
-}
-.Caja{
-    position: absolute;
-    padding-bottom: 7em;
-    top: 0;
-    right: 0;
-    z-index: -1;
-    width: 64.5%;
+article footer {
+  margin: 0;
+  padding: 0.7em 0;
+  display: inline-block;
+  vertical-align: top;
+  width: 95.8%;
 }
 
-.noticias{
+section article {
+  font-family: "Play", sans-serif;
+  font-weight: 700;
+  border: 0.1em double #05ff58;
+  margin: 0.7em 0;
+  padding: 0.7em 0;
+  background: transparent;
+}
+
+section div {
+  font-family: "Play", sans-serif;
+  font-weight: 400;
+  border: 0.1em solid #ffee00;
+  background: transparent;
+}
+
+section p {
+  font-family: "Play", sans-serif;
+  font-weight: 400;
+  border: 0.1em solid #ffee00;
+  width: 95.8%;
+  background: transparent;
+}
+
+footer {
+  font-family: "Play", sans-serif;
+  font-weight: 700;
+  border: 0.1em double #05ff58;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  background: transparent;
+  padding: 0.7em 0;
+}
+@media only screen and (max-width: 500px) {
+  footer {
+    left: none !important;
+    bottom: none !important;
+    width: 100% !important;
+  }
+}
+
+section {
+  border: 0.1em double #05ff58;
+  position: fixed;
+  top: 22%;
+  left: 0;
+  width: 30%;
+  margin-right: 0.5%;
+}
+
+.Caja {
+  position: absolute;
+  padding-bottom: 7em;
+  top: 0;
+  right: 0;
+  z-index: -1;
+  width: 64.5%;
+}
+@media only screen and (max-width: 500px) {
+  .Caja {
     position: relative !important;
-    display: inline-block;
-    top: 4.2em;
-    right: 0;
-    width: 96%;
-    margin-left: .5%;
-    border: var(--borde_caja_padre);
+    top: -65px !important;
+    left: -2px !important;
+    width: 100% !important;
+    height: 100vh !important;
+    z-index: 0 !important;
+  }
 }
-.noticias aside{
-    display: inline-block;
-    margin: 0;
-    width: 35%;
-    border: var(--borde_caja_hija);
+
+.noticias {
+  border: 0.1em double #05ff58;
+  position: relative !important;
+  display: inline-block;
+  top: 4.2em;
+  right: 0;
+  width: 96%;
+  margin-left: 0.5%;
 }
-.noticias article:nth-of-type(1) div:nth-of-type(1){
-    display: inline-block;
-    border: var(--borde_caja_padre);
-    width: 60.1%;
-    border: var(--borde_caja_hija);
+@media only screen and (max-width: 500px) {
+  .noticias {
+    display: inline-block !important;
+    width: 100% !important;
+  }
 }
-.noticias > header{
-    width: 96.6%;
-    /* background: red; */
+
+.noticias aside {
+  border: 0.1em solid #ffee00;
+  display: inline-block;
+  margin: 0;
+  width: 35%;
 }
-/* .noticias header */
-.noticias footer{
-    position: sticky;
-    display: inline-block;
-    width: 95.8%;
-    background: var(--relleno_footer);
-    border: var(--borde_caja_hija);
-    font-family: var(--fuente);
-    font-weight: var(--fuente_normal);
+
+.noticias article:nth-of-type(1) div:nth-of-type(1) {
+  border: 0.1em solid #ffee00;
+  display: inline-block;
+  width: 60.1%;
+}
+
+.noticias > header {
+  width: 96.6%;
+  /* background: red; */
+}
+@media only screen and (max-width: 500px) {
+  .noticias > header {
+    width: 100% !important;
+    padding: 0.7em 0em !important;
+  }
+}
+
+.noticias footer {
+  font-family: "Play", sans-serif;
+  font-weight: 400;
+  border: 0.1em solid #ffee00;
+  position: sticky;
+  display: inline-block;
+  width: 95.8%;
+  background: transparent;
 }
