@@ -7,7 +7,7 @@ html(lang="sp")
         link(rel="stylesheet", href="style.css")
         link(rel="shortcut icon", href="img/logo.png", type="image/png")
         link(rel="preconnect" href="https://fonts.gstatic.com")
-        link(href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap" rel="stylesheet")
+        link(link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet")
         title Taller 1 Maquetacion Web PUG
     body
         -let data =[{article: {titulo: "Lo mas reciente",header: "1",div: "2",aside: "3",p: "4" },article2: {titulo: "Novedades",header: "awd",div: "4",p: "6",footer: "7" },titulo: "Ultimas noticias"},{article: {titulo: "Lo mas reciente",header: "1",div: "2",aside: "3",p: "4" },article2: {titulo: "Novedades",header: "awd",div: "4",p: "6",footer: "7" },titulo: "Ultimas noticias"}];
@@ -15,10 +15,22 @@ html(lang="sp")
             console.log(!{JSON.stringify(data)});
         
         header
-            nav Nav
+            nav 
+                ul 
+                    li Menu 1
+                    li Menu 2
+                    li Menu 3
+                    li Menu 4
         section
-            nav Nav
-            aside Aside
+            nav 
+                ul 
+                    li Sub Menu 1
+                    li Sub Menu 2
+                    li Sub Menu 3
+                    li Sub Menu 4
+                    li Sub Menu 5
+            aside 
+                img(src="img/Pruebas.jpg", alt="", srcset="")
         div(class="Caja")
             mixin sesiones({...arg})
                 each valor, i in arg

@@ -9,44 +9,68 @@ body {
 }
 
 header {
-  font-family: "Play", sans-serif;
+  font-family: "Orbitron", sans-serif;
   font-weight: 700;
-  border: 0.1em double #05ff58;
+  border: 0.1em double #d59cfd;
   position: fixed;
   top: 0;
   width: 97.7%;
   text-align: center;
   padding: 0.7em 0.9em;
-  /* background: red; */
   background: transparent;
 }
 @media only screen and (max-width: 500px) {
   header {
     position: relative !important;
     top: 0 !important;
+    z-index: 10 !important;
     width: 100% !important;
   }
 }
 
 nav {
-  font-family: "Play", sans-serif;
+  font-family: "Orbitron", sans-serif;
   font-weight: 400;
-  border: 0.1em solid #ffee00;
+  border: 0.1em solid #03a9f4;
   text-align: center;
   /* background: red; */
   background: transparent;
 }
+nav ul li {
+  border: 0.1em solid #03a9f4;
+  display: inline-block;
+  padding: 0.5em;
+  margin: 0 0.7em;
+  -webkit-transition: all;
+  transition: all;
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+}
+@media only screen and (max-width: 500px) {
+  nav ul li {
+    margin: 0 -0.2em;
+  }
+}
+nav ul li:hover, nav ul li:active, nav ul li:focus {
+  -webkit-transition-timing-function: ease;
+          transition-timing-function: ease;
+  cursor: pointer;
+  color: white;
+  background: #673ab7;
+  opacity: 0.8;
+}
 
 aside {
-  font-family: "Play", sans-serif;
+  font-family: "Orbitron", sans-serif;
   font-weight: 400;
-  border: 0.1em solid #ffee00;
+  border: 0.1em solid #03a9f4;
   /* background: red; */
   background: transparent;
 }
 
 section {
-  font-family: "Play", sans-serif;
+  border: 0.1em double #d59cfd;
+  font-family: "Orbitron", sans-serif;
   font-weight: 700;
   text-align: center;
   display: inline-block;
@@ -55,6 +79,15 @@ section {
   padding: 0.7em 0.9em;
   /* background: red; */
   background: transparent;
+  position: fixed;
+  top: 15%;
+  left: 0;
+  width: 30%;
+  margin-right: 0.5%;
+}
+section ul li {
+  display: block;
+  margin: 0.7em;
 }
 @media only screen and (max-width: 500px) {
   section {
@@ -62,22 +95,26 @@ section {
   }
 }
 
-section nav {
-  /*Adaptar nuesto contemido*/
-  padding: 120px 0;
-  /* background: red; */
-}
-
 section aside {
   /*Adaptar nuesto contemido*/
-  padding: 50px 0;
+  position: relative;
+  width: 99.4%;
+  height: 250px;
+  overflow: hidden;
   /* background: red; */
+}
+section aside img {
+  position: absolute;
+  left: 0;
+  padding: 0.7em 0;
+  z-index: -1;
+  width: 100%;
 }
 
 section header {
-  font-family: "Play", sans-serif;
+  font-family: "Orbitron", sans-serif;
   font-weight: 400;
-  border: 0.1em solid #ffee00;
+  border: 0.1em solid #03a9f4;
   position: static;
   /* background: red; */
 }
@@ -95,9 +132,9 @@ article footer {
 }
 
 section article {
-  font-family: "Play", sans-serif;
+  font-family: "Orbitron", sans-serif;
   font-weight: 700;
-  border: 0.1em double #05ff58;
+  border: 0.1em double #d59cfd;
   margin: 0.7em 0;
   padding: 0.7em 0;
   background: transparent;
@@ -110,9 +147,9 @@ section article {
 }
 
 section div {
-  font-family: "Play", sans-serif;
+  font-family: "Orbitron", sans-serif;
   font-weight: 400;
-  border: 0.1em solid #ffee00;
+  border: 0.1em solid #03a9f4;
   background: transparent;
 }
 @media only screen and (max-width: 500px) {
@@ -122,9 +159,9 @@ section div {
 }
 
 section p {
-  font-family: "Play", sans-serif;
+  font-family: "Orbitron", sans-serif;
   font-weight: 400;
-  border: 0.1em solid #ffee00;
+  border: 0.1em solid #03a9f4;
   width: 95.8%;
   background: transparent;
 }
@@ -135,9 +172,9 @@ section p {
 }
 
 footer {
-  font-family: "Play", sans-serif;
+  font-family: "Orbitron", sans-serif;
   font-weight: 700;
-  border: 0.1em double #05ff58;
+  border: 0.1em double #d59cfd;
   position: fixed;
   left: 0;
   bottom: 0;
@@ -152,15 +189,6 @@ footer {
     bottom: none !important;
     width: 100% !important;
   }
-}
-
-section {
-  border: 0.1em double #05ff58;
-  position: fixed;
-  top: 22%;
-  left: 0;
-  width: 30%;
-  margin-right: 0.5%;
 }
 
 .Caja {
@@ -178,12 +206,12 @@ section {
     left: -2px !important;
     width: 100% !important;
     height: 100vh !important;
-    z-index: 0 !important;
+    z-index: 5 !important;
   }
 }
 
 .noticias {
-  border: 0.1em double #05ff58;
+  border: 0.1em double #d59cfd;
   position: relative !important;
   display: inline-block;
   top: 4.2em;
@@ -199,10 +227,11 @@ section {
 }
 
 .noticias aside {
-  border: 0.1em solid #ffee00;
+  border: 0.1em solid #03a9f4;
   display: inline-block;
   margin: 0;
   width: 35%;
+  height: 100%;
 }
 @media only screen and (max-width: 500px) {
   .noticias aside {
@@ -211,9 +240,9 @@ section {
 }
 
 .noticias article:nth-of-type(1) div:nth-of-type(1) {
-  border: 0.1em solid #ffee00;
+  border: 0.1em solid #03a9f4;
   display: inline-block;
-  width: 60.1%;
+  width: 60%;
 }
 @media only screen and (max-width: 500px) {
   .noticias article:nth-of-type(1) div:nth-of-type(1) {
@@ -233,9 +262,9 @@ section {
 }
 
 .noticias footer {
-  font-family: "Play", sans-serif;
+  font-family: "Orbitron", sans-serif;
   font-weight: 400;
-  border: 0.1em solid #ffee00;
+  border: 0.1em solid #03a9f4;
   position: sticky;
   display: inline-block;
   width: 95.8%;
