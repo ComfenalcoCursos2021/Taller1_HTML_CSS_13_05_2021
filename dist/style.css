@@ -102,12 +102,23 @@ section article {
   padding: 0.7em 0;
   background: transparent;
 }
+@media only screen and (max-width: 500px) {
+  section article {
+    padding-left: 0.7em;
+    padding-right: 0.7em;
+  }
+}
 
 section div {
   font-family: "Play", sans-serif;
   font-weight: 400;
   border: 0.1em solid #ffee00;
   background: transparent;
+}
+@media only screen and (max-width: 500px) {
+  section div {
+    width: 100%;
+  }
 }
 
 section p {
@@ -116,6 +127,11 @@ section p {
   border: 0.1em solid #ffee00;
   width: 95.8%;
   background: transparent;
+}
+@media only screen and (max-width: 500px) {
+  section p {
+    width: 100%;
+  }
 }
 
 footer {
@@ -188,11 +204,21 @@ section {
   margin: 0;
   width: 35%;
 }
+@media only screen and (max-width: 500px) {
+  .noticias aside {
+    width: 100%;
+  }
+}
 
 .noticias article:nth-of-type(1) div:nth-of-type(1) {
   border: 0.1em solid #ffee00;
   display: inline-block;
   width: 60.1%;
+}
+@media only screen and (max-width: 500px) {
+  .noticias article:nth-of-type(1) div:nth-of-type(1) {
+    width: 100%;
+  }
 }
 
 .noticias > header {
@@ -201,7 +227,7 @@ section {
 }
 @media only screen and (max-width: 500px) {
   .noticias > header {
-    width: 100% !important;
+    width: 99.4% !important;
     padding: 0.7em 0em !important;
   }
 }

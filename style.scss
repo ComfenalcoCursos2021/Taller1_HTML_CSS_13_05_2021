@@ -93,6 +93,10 @@ section{
         margin: .7em .0;
         padding: .7em .0;
         background: $relleno_article;
+        @media only screen and (max-width: 500px)  {
+            padding-left: .7em;
+            padding-right: .7em;
+        }
     }
 }
 section{
@@ -100,6 +104,9 @@ section{
         @include normal;
         @include diseño-hija;
         background: $relleno_div;
+        @media only screen and (max-width: 500px)  {
+            width: 100%;
+        }
     }
 }
 section{
@@ -108,6 +115,9 @@ section{
         @include diseño-hija;
         width: 95.8%;
         background: $relleno_p;
+        @media only screen and (max-width: 500px)  {
+            width: 100%;
+        }
     }
 }
 footer{
@@ -169,6 +179,9 @@ section{
         display: inline-block;
         margin: 0;
         width: 35%;
+        @media only screen and (max-width: 500px)  {
+            width: 100%;
+        }
     }
 }
 .noticias{
@@ -177,13 +190,16 @@ section{
             @include diseño-hija;
             display: inline-block;
             width: 60.1%;
+            @media only screen and (max-width: 500px)  {
+                width: 100%;
+            }
         }
     }
 }
 .noticias > header{
     width: 96.6%;
     @media only screen and (max-width: 500px)  {
-        width: 100% !important;
+        width: 99.4% !important;
         padding: 0.7em 0em !important;
     }
     /* background: red; */
