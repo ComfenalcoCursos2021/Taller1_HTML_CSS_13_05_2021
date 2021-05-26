@@ -1,8 +1,8 @@
 $borde_caja_padre: .1em double #d59cfd;
-$borde_caja_hija: .1em solid #03a9f4;
+// $borde_caja_hija: .1em solid #03a9f4;
 
 // $borde_caja_padre: .1em double transparent;
-// $borde_caja_hija: .1em solid transparent;
+$borde_caja_hija: .1em solid transparent;
 
 
 @mixin diseño-hija {
@@ -14,4 +14,5 @@ $borde_caja_hija: .1em solid #03a9f4;
     // background: blue !important;
     // padding: 20px 0px !important;
     border: $borde_caja_padre;
+    border-radius: 5px;
 }

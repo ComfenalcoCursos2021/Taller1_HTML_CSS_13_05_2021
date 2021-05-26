@@ -11,24 +11,23 @@ html(lang="sp")
         title Taller 1 Maquetacion Web PUG
     body
         -let data =[{article: {titulo: "Lo mas reciente",header: "1",div: "2",aside: "3",p: "4" },article2: {titulo: "Novedades",header: "awd",div: "4",p: "6",footer: "7" },titulo: "Ultimas noticias"},{article: {titulo: "Lo mas reciente",header: "1",div: "2",aside: "3",p: "4" },article2: {titulo: "Novedades",header: "awd",div: "4",p: "6",footer: "7" },titulo: "Ultimas noticias"}];
+        -let menu = {Principal: ["Menu 1","Menu 2","Menu 3","Menu 4"], Sub: ["Sub Menu 1","Sub Menu 2","Sub Menu 3","Sub Menu 4"]};
         script.
             console.log(!{JSON.stringify(data)});
-        
         header
-            nav 
-                ul 
-                    li Menu 1
-                    li Menu 2
-                    li Menu 3
-                    li Menu 4
+            mixin Menus({...arg})
+                nav 
+                    ul 
+                        each valor, i in arg
+                            li=valor
+            +Menus(menu.Principal)
         section
-            nav 
-                ul 
-                    li Sub Menu 1
-                    li Sub Menu 2
-                    li Sub Menu 3
-                    li Sub Menu 4
-                    li Sub Menu 5
+            mixin Menus2({...arg})
+                nav 
+                    ul 
+                        each valor, i in arg
+                            li=valor
+            +Menus2(menu.Sub)
             aside 
                 img(src="img/Pruebas.jpg", alt="", srcset="")
         div(class="Caja")
