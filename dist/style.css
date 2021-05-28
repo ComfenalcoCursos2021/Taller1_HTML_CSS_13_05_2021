@@ -254,6 +254,9 @@ section p {
   width: 95.8%;
   background: transparent;
 }
+section p img {
+  width: 100%;
+}
 section article {
   font-family: "Orbitron", sans-serif;
   font-weight: 700;

@@ -139,6 +139,9 @@ section{
         @include diseño-hija;
         width: 95.8%;
         background: $relleno_p;
+        img{
+            width: 100%;
+        }
     }
     article{
         @include negrita;
