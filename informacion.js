@@ -21,5 +21,5 @@ let data = [
                 title: "bbc.com/mundo/noticias"
             }
         }
-    }, 
+    }
 ];

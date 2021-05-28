@@ -103,6 +103,24 @@
   padding: 0;
 }
 
+::-webkit-scrollbar {
+  width: 13px;
+  height: 13px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #d59cfd;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #d59cfd;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 3px;
+}
+
 body {
   background: #fdfdfd;
   overflow-x: hidden;
@@ -328,6 +346,23 @@ footer {
   text-align: center;
   background: #fdfdfd;
   padding: 0.7em 0;
+}
+footer ul li {
+  display: inline-block;
+}
+footer ul li:nth-last-child(odd) {
+  font-family: "Orbitron", sans-serif;
+  font-weight: 400;
+}
+footer ul li:nth-of-type(4) a {
+  color: #8bc34a;
+}
+@media only screen and (max-width: 500px) {
+  footer ul li:nth-last-child(even),
+footer ul li:nth-of-type(2),
+footer ul li:nth-of-type(4) {
+    display: none;
+  }
 }
 footer a {
   text-decoration: none;
