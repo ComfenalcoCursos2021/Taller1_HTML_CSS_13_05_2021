@@ -322,3 +322,16 @@ footer{
     }
     /* background: red; */
 }
+
+.burbujaWhatsapp{
+    position: fixed;
+    // cursor: pointer;
+    right: 1em;
+    bottom: 4em;
+    border-radius: 100%;
+    // box-shadow: 0px 0px 10px $whatsapp,0px 0px 10px $whatsapp,0px 0px 10px $whatsapp;
+    @include Mostrar(parpadeo, 0s,infinite,alternate-reverse);
+    width: 38px;
+    height: 38px;
+    
+}

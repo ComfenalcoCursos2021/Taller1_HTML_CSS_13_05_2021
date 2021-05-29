@@ -66,6 +66,50 @@
     left: 0em;
   }
 }
+@-webkit-keyframes parpadeo {
+  0% {
+    -webkit-box-shadow: 0px 0px 10px #8bc34a, 0px 0px 10px #8bc34a, 0px 0px 10px #8bc34a;
+            box-shadow: 0px 0px 10px #8bc34a, 0px 0px 10px #8bc34a, 0px 0px 10px #8bc34a;
+  }
+  25% {
+    -webkit-box-shadow: 0px 0px 15px #8bc34a, 0px 0px 15px #8bc34a, 0px 0px 15px #8bc34a;
+            box-shadow: 0px 0px 15px #8bc34a, 0px 0px 15px #8bc34a, 0px 0px 15px #8bc34a;
+  }
+  50% {
+    -webkit-box-shadow: 0px 0px 18px #8bc34a, 0px 0px 18px #8bc34a, 0px 0px 18px #8bc34a;
+            box-shadow: 0px 0px 18px #8bc34a, 0px 0px 18px #8bc34a, 0px 0px 18px #8bc34a;
+  }
+  75% {
+    -webkit-box-shadow: 0px 0px 15px #8bc34a, 0px 0px 15px #8bc34a, 0px 0px 15px #8bc34a;
+            box-shadow: 0px 0px 15px #8bc34a, 0px 0px 15px #8bc34a, 0px 0px 15px #8bc34a;
+  }
+  100% {
+    -webkit-box-shadow: 0px 0px 10px #8bc34a, 0px 0px 10px #8bc34a, 0px 0px 10px #8bc34a;
+            box-shadow: 0px 0px 10px #8bc34a, 0px 0px 10px #8bc34a, 0px 0px 10px #8bc34a;
+  }
+}
+@keyframes parpadeo {
+  0% {
+    -webkit-box-shadow: 0px 0px 10px #8bc34a, 0px 0px 10px #8bc34a, 0px 0px 10px #8bc34a;
+            box-shadow: 0px 0px 10px #8bc34a, 0px 0px 10px #8bc34a, 0px 0px 10px #8bc34a;
+  }
+  25% {
+    -webkit-box-shadow: 0px 0px 15px #8bc34a, 0px 0px 15px #8bc34a, 0px 0px 15px #8bc34a;
+            box-shadow: 0px 0px 15px #8bc34a, 0px 0px 15px #8bc34a, 0px 0px 15px #8bc34a;
+  }
+  50% {
+    -webkit-box-shadow: 0px 0px 18px #8bc34a, 0px 0px 18px #8bc34a, 0px 0px 18px #8bc34a;
+            box-shadow: 0px 0px 18px #8bc34a, 0px 0px 18px #8bc34a, 0px 0px 18px #8bc34a;
+  }
+  75% {
+    -webkit-box-shadow: 0px 0px 15px #8bc34a, 0px 0px 15px #8bc34a, 0px 0px 15px #8bc34a;
+            box-shadow: 0px 0px 15px #8bc34a, 0px 0px 15px #8bc34a, 0px 0px 15px #8bc34a;
+  }
+  100% {
+    -webkit-box-shadow: 0px 0px 10px #8bc34a, 0px 0px 10px #8bc34a, 0px 0px 10px #8bc34a;
+            box-shadow: 0px 0px 10px #8bc34a, 0px 0px 10px #8bc34a, 0px 0px 10px #8bc34a;
+  }
+}
 @-webkit-keyframes headerAnimacion {
   0% {
     top: -5em;
@@ -216,8 +260,12 @@ section {
           animation-duration: 1s;
   -webkit-animation-delay: 0s;
           animation-delay: 0s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
   -webkit-animation-timing-function: linear;
           animation-timing-function: linear;
+  -webkit-animation-direction: normal;
+          animation-direction: normal;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
   text-align: center;
@@ -407,8 +455,12 @@ footer a {
           animation-duration: 1s;
   -webkit-animation-delay: 0.2s;
           animation-delay: 0.2s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
   -webkit-animation-timing-function: linear;
           animation-timing-function: linear;
+  -webkit-animation-direction: normal;
+          animation-direction: normal;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
   left: 100em;
@@ -472,8 +524,12 @@ footer a {
             animation-duration: 1s;
     -webkit-animation-delay: 0s;
             animation-delay: 0s;
+    -webkit-animation-iteration-count: 1;
+            animation-iteration-count: 1;
     -webkit-animation-timing-function: linear;
             animation-timing-function: linear;
+    -webkit-animation-direction: normal;
+            animation-direction: normal;
     -webkit-animation-fill-mode: forwards;
             animation-fill-mode: forwards;
   }
@@ -490,4 +546,26 @@ footer a {
     width: 99.4% !important;
     padding: 0.7em 0em !important;
   }
+}
+
+.burbujaWhatsapp {
+  position: fixed;
+  right: 1em;
+  bottom: 4em;
+  border-radius: 100%;
+  -webkit-animation-name: parpadeo;
+          animation-name: parpadeo;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  animation-direction: alternate-reverse;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  width: 38px;
+  height: 38px;
 }
