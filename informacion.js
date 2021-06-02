@@ -21,5 +21,28 @@ let data = [
                 title: "bbc.com/mundo/noticias"
             }
         }
+    },
+    {
+        titulo: "Xataka",
+        article: {
+            titulo: null,
+            header: "a",
+            div: "",
+            aside: "",
+            p: {
+                src: "",
+                title: ""
+            }
+        },
+        article2: {
+            titulo: "BBC NEWS | MUNDO",
+            header: "El Perseverance llega a Marte: por qué 3 misiones de tres países diferentes llegaron al planeta rojo casi al mismo tiempo",
+            div: "Febrero ha sido un mes decisivo para la exploración de Marte.",
+            p: 'Este jueves el robot explorador Perseverance de la NASA llegó a Marte, tras un viaje de cerca de 480 millones de km que inició en julio de 2020. El Perseverance descendió hasta la superficie marciana sujetado por una "grúa celestial". Para ello sobrevivió a los llamados "siete minutos de terror", el período de ingreso y descenso en la atmósfera marciana en que la temperatura y el riesgo eran máximos.',
+            footer:{
+                src: "https://www.bbc.com/mundo/noticias-55990181",
+                title: "bbc.com/mundo/noticias"
+            }
+        }
     }
 ];
